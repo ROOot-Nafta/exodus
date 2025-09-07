@@ -1,0 +1,195 @@
+body {
+  margin: 0;
+  background-color: black;
+  font-family: 'Share Tech Mono', monospace;
+  color: white;
+}
+
+.layout {
+  display: flex;
+  height: 100vh;
+}
+
+/* LATERAL ESQUERDA */
+.sidebar {
+  width: 250px;
+  padding: 20px;
+  border-right: 1px solid #444;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.sidebar h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.music-player audio {
+  width: 100%;
+  filter: grayscale(100%) brightness(0.8);
+}
+
+.photo img {
+  width: 100%;
+  max-width: 160px;
+  object-fit: cover;
+  border: 1px solid #555;
+}
+
+.updates {
+  font-size: 12px;
+  text-align: center;
+  opacity: 0.7;
+}
+
+/* CONTEÚDO PRINCIPAL */
+.main-content {
+  flex: 1;
+  padding: 40px 20px;
+}
+
+.main-content h2 {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
+
+.poema-box {
+  background-color: #111;
+  border: 1px solid #444;
+  padding: 20px;
+  min-height: 300px;
+  overflow-y: auto;
+}
+.updates {
+  font-size: 12px;
+  width: 100%;
+  text-align: left;
+  opacity: 1;
+}
+
+.updates p {
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: bold;
+  opacity: 0.7;
+}
+
+.update-block {
+  background-color: #111;
+  border: 1px solid #444;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+.update-time {
+  font-size: 10px;
+  color: #888;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.update-text {
+  font-size: 11px;
+  color: #ccc;
+  margin: 0;
+}
+.poema-bloco {
+  background-color: #111;
+  border: 1px solid #444;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 0 10px #000;
+  overflow: hidden;
+}
+
+.poema-toggle {
+  background: none;
+  border: none;
+  color: #aaa;
+  font-family: 'Share Tech Mono', monospace;
+  text-align: left;
+  width: 100%;
+  padding: 15px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.poema-toggle:hover {
+  background-color: #222;
+}
+
+.poema-conteudo {
+  padding: 0 20px 20px;
+  display: none;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* CHAT / UPDATES */
+.updates {
+  width: 100%;
+}
+
+.updates p {
+  text-align: center;
+  font-size: 12px;
+  opacity: 0.7;
+  margin-bottom: 10px;
+}
+
+.update-block {
+  background-color: #111;
+  border: 1px solid #444;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+.update-time {
+  font-size: 10px;
+  color: #888;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.update-text {
+  font-size: 11px;
+  color: #ccc;
+  margin: 0;
+}
+
+summary {
+  cursor: pointer;
+  padding: 15px 20px;
+  font-size: 16px;
+  color: #aaa;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+summary:hover {
+  background-color: #222;
+}
+
+/* opcional: esconder setinha padrão e usar [+]/[-] */
+summary::marker {
+  display: none;
+}
+
+details[open] > summary::before {
+  content: "[-] ";
+}
+
+details > summary::before {
+  content: "[+] ";
+}
