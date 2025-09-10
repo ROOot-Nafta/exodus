@@ -40,9 +40,10 @@ h5 {
 }
 
 h6 {
-  font-size: 5px;
-  margin: 0;
-  animation: glitch 2s infinite;
+  font-size: 7px;
+  margin: 5px 0 15px;
+  opacity: 0.5;
+  animation: flicker 3s infinite;
 }
 
 
