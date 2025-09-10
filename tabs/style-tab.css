@@ -21,7 +21,7 @@ body {
   animation: flicker 4s infinite alternate;
 }
 
-h1, h5, a {
+h1, h5, h6, a {
   position: relative;
   z-index: 1;
 }
@@ -38,6 +38,13 @@ h5 {
   opacity: 0.5;
   animation: flicker 3s infinite;
 }
+
+h6 {
+  font-size: 5px;
+  margin: 0;
+  animation: glitch 2s infinite;
+}
+
 
 a {
   font-size: 13px;
